@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+@import "import.scss";
+
+
+
+$my-app-primary: mat-palette($mat-blue-grey);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+.mat-tab-links{
+    background-color: #fff;
+    border-top: solid 1px #c8d7e1;
+    border-left: solid 1px #c8d7e1;
+    border-right: solid 1px #c8d7e1;
+}
+
+.mat-tab-label-active:focus{
+    background-color: none;
+}
+
+.wped-masthead {
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(200,215,225,0.5), 0 1px 2px #e9eff3;
+}
+
+.wped-pagestyles #wpcontent {
+    padding-left: 0;
+}
+.wped-masthead__inside-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 65rem;
+   padding: 10px 0;
+}
+
+
+.wped-active:active,
+.wped-active:hover,
+.wped-active:visited{
+    outline: none !important;
+}
+
+
+
+.wped-lower {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 65rem;
+    padding: 1.5rem;
+}
+.wped-pagestyles{
+.nav-tab-wrapper a.wped-active{
+   outline: none !important;
+}
+.nav-tab-wrapper a.wped-active:active {
+outline: none !important;
+border: 0 !important;
+}
+
+.nav-tab-wrapper a.wped-active:focus {outline: none !important;}
+}

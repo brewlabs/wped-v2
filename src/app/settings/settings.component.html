@@ -1,0 +1,45 @@
+<mat-card class="result">
+  <mat-card-content>
+    <h2 class="example-h2">Setup</h2>
+
+    <section class="example-section">
+      <mat-slide-toggle
+          class="example-margin"
+          [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Send all emails with WPED.
+      </mat-slide-toggle>
+    </section>
+  </mat-card-content>
+</mat-card>
+<br>
+<mat-card class="result">
+  <mat-card-content>
+    <h2 class="example-h2">Advanced</h2>
+
+    <section class="example-section">
+      <mat-slide-toggle
+          class="example-margin"
+          [color]="color"
+          [checked]="checked"
+          [disabled]="disabled">
+        Send all Emails with the settings below.
+      </mat-slide-toggle>
+
+      
+    <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" formControl="emailFormControl">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+    </section>
+
+
+  </mat-card-content>
+</mat-card>
+

@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="wped-masthead">
+  <div class="wped-masthead__inside-container">
+  
+      <img src="http://wp.test/wp-content/plugins/wped-v2/dev/assets/wped-header.png" height="30"  />
+   
+  </div>
+</div>
+<div class="wped-lower">
+  <nav mat-tab-nav-bar disableRipple>
+  <a mat-tab-link
+  *ngFor="let link of navLinks"
+  [routerLink]="link.path"
+  routerLinkActive #rla="routerLinkActive"
+  [active]="rla.isActive">
+  {{link.data.title}}
+  </a>
+  </nav>
+<br><br>
+<router-outlet></router-outlet>
+</div>
